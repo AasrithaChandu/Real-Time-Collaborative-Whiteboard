@@ -1,0 +1,30 @@
+<div id="login">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="toolbar">
+        <button onclick="setColor('black')">Black</button>
+        <button onclick="setColor('red')">Red</button>
+        <button onclick="setColor('green')">Green</button>
+        <button onclick="setColor('blue')">Blue</button>
+        <button onclick="setBrushSize(2)">Thin</button>
+        <button onclick="setBrushSize(5)">Thick</button>
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="undo()">Undo</button>
+        <button onclick="redo()">Redo</button>
+        <button onclick="saveAsImage()">Save as Image</button>
+        <button onclick="toggleChat()">Toggle Chat</button>
+        <button onclick="document.getElementById('uploadInput').click()">Upload Image</button>
+    </div>
+
+    <canvas id="whiteboard" width="800" height="600"></canvas>
+
+    <input type="file" id="uploadInput" accept="image/*" onchange="handleImageUpload(event)">
+
+    <div id="chat">
+        <div id="chatMessages"></div>
+        <input id="chatInput" type="text" placeholder="Type a message..." onkeydown="sendMessage(event)">
+    </div>
